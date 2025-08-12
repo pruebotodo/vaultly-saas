@@ -1,6 +1,6 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import 'dotenv/config';
 
 const app = express();
 
@@ -10,15 +10,15 @@ app.use(express.json());
 
 // Healthcheck
 app.get('/api/health', (req, res) => {
-  res.status(200).json({ ok: true });
+  res.status(200).json({ ok: true, ts: new Date().toISOString() });
 });
 
-// Ejemplo de raíz (puedes quitarla si no la quieres)
+// Raíz opcional
 app.get('/', (req, res) => {
-  res.type('text').send('Vaultly API activo');
+  res.status(200).send('Vaultly API activo');
 });
 
-// Render usa PORT en producción; local: 3000
+// Puerto (Render usa PORT)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en puerto ${PORT}`);
