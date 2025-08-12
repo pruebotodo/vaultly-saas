@@ -1,22 +1,22 @@
 {
   "name": "vaultly-server",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
-  "main": "src/index.js",
+  "engines": {
+    "node": ">=20.0.0 <21"
+  },
   "scripts": {
     "dev": "node --watch src/index.js",
     "start": "node src/index.js"
   },
-  "engines": {
-    "node": ">=18"
-  },
   "dependencies": {
-    "better-sqlite3": "^9.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "openai": "^4.53.2",
-    "youtube-dl-exec": "^3.0.10",
+    "openai": "^4.52.2",
+    "stripe": "^14.24.0",
+    "youtube-dl-exec": "^2.5.4",
     "ffmpeg-static": "^5.2.0",
     "uuid": "^9.0.1"
   }
