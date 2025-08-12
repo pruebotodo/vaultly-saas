@@ -1,0 +1,1 @@
+import React from 'react';import { createRoot } from 'react-dom/client';import './styles.css';import Guard from './components/Guard';import App from './pages/App';createRoot(document.getElementById('root')).render(<Guard>{(session)=><App session={session}/>}</Guard>);

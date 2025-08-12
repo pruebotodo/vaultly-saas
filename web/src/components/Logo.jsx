@@ -1,0 +1,1 @@
+export default function Logo({size=28}){return <div className='logo' style={{width:size,height:size}}>V</div>}
